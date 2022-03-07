@@ -1,0 +1,235 @@
+.tarifs {
+    padding: 50px 0 70px;
+    text-align: center;
+    border-bottom: 1px solid #eef;
+
+    &__header {
+        max-width: 500px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+    }
+
+    &__period {
+        display: inline-block;
+        border: 1px solid #ddd;
+        border-radius: 25px;
+        padding: 2px;
+        padding-right: 30px;
+        margin-bottom: 30px;
+    }
+
+    &__selector {
+        display: inline-block;
+        font-weight: bold;
+        border-radius: 25px;
+        padding: 8px 28px 10px;
+        background-color: $blue;
+        color: #fff;
+        margin-left: 0;
+        margin-right: 20px;
+    }
+
+    &__content {
+        list-style-type: none;
+    }
+
+    &__business {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 40px 25px;
+        background: linear-gradient(to bottom, #fffffe, #f4f7f9);
+    }
+
+    &__cost {
+        margin-bottom: 13px;
+    }
+
+    &__lead {
+        font-size: 21px;
+        margin-bottom: 2px;
+    }
+
+    &__secondary {
+        color: #888;
+    }
+
+    &__content {
+        padding: 30px;
+        color: #999;
+        perspective: 1200px;
+    }
+
+    &__item {
+        margin-bottom: 17px;
+    }
+
+    &__link {
+        margin-top: 12px;
+        display: inline-block;
+    }
+
+    &__link--btn {
+        @include blue-button;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    &__link--text {
+        text-decoration: none;
+        font-weight: bold;
+        color: $blue;
+        transition: 0.15s transform linear, 0.15s text-shadow;
+        transform-origin: center bottom;
+
+        &:hover {
+            transform: rotateX(30deg);
+            text-shadow: 2px 2px #ccc;
+        }
+    }
+}
+
+.tarif__types {
+    @include myFlex;
+    max-width: 650px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    perspective: 1200px;
+}
+
+.tarif__type {
+    width: 47%;
+    border-radius: 10px;
+    border: 1.5px solid #dde;
+    transform-origin: left center;
+    transition: 0.15s transform linear, 0.15s box-shadow linear, 0.15s border-color linear;
+
+    &:hover {
+        box-shadow: 0 0 20px 7px #eee;
+        border-color: transparent;
+        transform: scale(0.95) rotateY(7deg);
+    }
+}
+
+.tarifs__cost .number {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.tarifs__cost .period {
+    font-size: 20px;
+    color: #aaa;
+}
+
+// ! media
+
+@media (max-width: 770px) {
+    .tarif__types {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 670px) {
+    .tarif__type {
+        width: 48%;
+    }
+
+    .tarifs__business {
+        padding: 30px 15px;
+    }
+
+    .tarifs__content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 570px) {
+    .tarif__types {
+        justify-content: center;
+    }
+
+    .tarif__type {
+        width: 80%;
+
+        &:first-child {
+            margin-bottom: 25px;
+        }
+    }
+
+    .tarifs__content {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 550px) {
+    .tarifs__header {
+        padding: 0 30px;
+    }
+
+    .tarif__types {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 470px) {
+    .tarif__type {
+        width: 90%;
+    }
+}
+
+@media (max-width: 440px) {
+    .tarif__type {
+        width: 95%;
+    }
+}
+
+@media (max-width: 350px) {
+    .tarif__types {
+        padding: 0 20px;
+    }
+
+    .tarif__type {
+        width: 100%;
+    }
+
+    .tarifs__period {
+        border-radius: 22px;
+        padding: 2px;
+        padding-right: 20px;
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    .tarifs__selector {
+        font-size: 15px;
+        border-radius: 22px;
+        padding: 6px 24px 7px;
+        margin-right: 10px;
+    }
+
+    .tarifs__cost .number {
+        font-size: 40px;
+    }
+
+    .tarifs__cost .period {
+        font-size: 15px;
+    }
+
+    .tarifs__lead {
+        font-size: 19px;
+    }
+
+    .tarifs__secondary {
+        font-size: 17px;
+    }
+
+    .tarifs__content {
+        font-size: 15px;
+        padding: 30px;
+    }
+}

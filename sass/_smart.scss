@@ -1,0 +1,262 @@
+.smart {
+    padding: 30px 0 60px;
+    border-bottom: 1.5px solid #eef;
+}
+
+.jackpot {
+    @include myFlex;
+    justify-content: flex-start;
+    padding: 0 70px;
+    margin-bottom: 70px;
+
+    &__header {
+        width: 35%;
+        margin-right: 50px;
+    }
+
+    &__text {
+        width: 50%;
+        padding: 30px 40px;
+        border-left: 1.5px solid #dde;
+    }
+
+    &-features {
+        @include myFlex;
+        justify-content: space-between;
+        padding: 0 70px;
+        margin-bottom: 70px;
+    }
+
+    &-feature {
+        width: 27%;
+
+        .lead {
+            margin-bottom: 8px;
+        }
+    }
+
+    &-feature--pic {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    &-feature--bill {
+        @include circle-bg($twored);
+    }
+
+    &-feature--network {
+        @include circle-bg($blueish);
+    }
+
+    &-feature--badge {
+        @include circle-bg($greenish);
+    }
+}
+
+.design {
+    @include myFlex;
+    justify-content: flex-start;
+
+    &__img {
+        width: 500px;
+        margin-right: 70px;
+    }
+
+    &__content {
+        width: 40%;
+    }
+
+    &__header {
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        display: inline-block;
+        text-decoration: none;
+        @include blue-button;
+    }
+}
+
+// ! media
+
+@media (max-width: 1350px) {
+    .design {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .design {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .jackpot__header {
+        width: 40%;
+    }
+
+    .design__img {
+        width: 50%;
+        margin-right: 5%;
+    }
+
+    .design__content {
+        width: 45%;
+    }
+}
+
+@media (max-width: 960px) {
+    .jackpot__header {
+        width: 45%;
+        margin-right: 5%;
+    }
+
+    .jackpot-feature {
+        width: 30%;
+    }
+}
+
+@media (max-width: 900px) {
+    .jackpot__text {
+        padding: 40px 0 40px 30px;
+    }
+}
+
+@media (max-width: 850px) {
+    .jackpot__header {
+        width: 47%;
+        margin-right: 3%;
+    }
+}
+
+@media (max-width: 800px) {
+    .jackpot-feature {
+        width: 31%;
+    }
+}
+
+@media (max-width: 750px) {
+    .jackpot,
+    .jackpot-features,
+    .design {
+        justify-content: center;
+    }
+
+    .jackpot__header {
+        width: 90%;
+        margin-bottom: 30px;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .jackpot__text {
+        width: 80%;
+        border: none;
+        padding: 0;
+        text-align: justify;
+    }
+
+    .jackpot-feature {
+        width: 60%;
+        margin-bottom: 50px;
+    }
+
+    .design__img {
+        width: 70%;
+        margin-bottom: 30px;
+    }
+
+    .design__content {
+        width: 70%;
+    }
+
+    .design__btn {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+    }
+}
+
+@media (max-width: 750px) {
+    .jackpot__header,
+    .jackpot__text,
+    .design__img,
+    .design__content {
+        width: 90%;
+    }
+
+    .jackpot-feature {
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .design {
+        padding: 0 40px;
+    }
+
+    .jackpot__header,
+    .jackpot__text,
+    .design__img,
+    .design__content {
+        width: 95%;
+    }
+
+    .design__content {
+        text-align: center;
+    }
+
+    .design__btn {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .jackpot-feature {
+        width: 90%;
+    }
+
+    .jackpot,
+    .jackpot-features {
+        padding-left: 40px;
+        padding-right: 40px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .jackpot__header {
+        text-align: unset;
+    }
+
+    .jackpot__header,
+    .jackpot__text,
+    .design__img,
+    .design__content {
+        width: 100%;
+    }
+
+    .jackpot-feature {
+        width: 97%;
+    }
+
+    .jackpot,
+    .jackpot-features {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .design__btn {
+        width: 70%;
+    }
+
+    .design {
+        padding: 0 30px;
+    }
+}

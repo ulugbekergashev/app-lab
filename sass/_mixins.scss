@@ -1,0 +1,93 @@
+@mixin blue-button {
+    position: relative;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 27px 15px;
+    background-color: $blue;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 10;
+    transition: 0.17s transform, 0.17s box-shadow, 0.17s color;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        background-color: rgba(22, 150, 150, 0.8);
+        z-index: -1;
+        transition: 0.25s transform linear 0.22s;
+        transform: translateX(-100%);
+    }
+
+    &:hover {
+        transform: scale(1.06);
+        box-shadow: 3px 4px 12px 2px #999;
+        color: #ffffdd;
+    }
+
+    &:hover::after {
+        transform: translate(0);
+    }
+
+    &:focus {
+        outline: 2px solid green;
+    }
+
+    @media (max-width: 340px) {
+        font-size: 15px;
+        padding: 10px 20px 13px;
+    }
+}
+
+@mixin myFlex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin circle-bg($bgcolor) {
+    @include myFlex;
+    display: inline-flex;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: $bgcolor;
+}
+
+@mixin store-badge {
+    @include myFlex;
+    position: relative;
+    background-color: rgb(8, 45, 114);
+    color: #fff;
+    border-radius: 7px;
+    padding: 5px 15px;
+    z-index: 333;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.2s box-shadow 0.1s;
+
+    &:hover {
+        box-shadow: 2px 2px 15px 5px #bbc;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 7px;
+        background-color: #000;
+        z-index: -1;
+        transition: 0.3s transform 0.2s;
+    }
+
+    &:hover::before {
+        transform: translateY(100%);
+    }
+}

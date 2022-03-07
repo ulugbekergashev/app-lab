@@ -1,0 +1,202 @@
+.features {
+    padding: 50px 0 70px;
+    background-image: url("../img/features-layer.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    border-bottom: 1.5px solid #ffe;
+
+    &__inner {
+        width: 600px;
+        padding-left: 30px;
+    }
+
+    &__header {
+        width: 400px;
+        margin-bottom: 70px;
+    }
+
+    &__title {
+        width: 270px;
+        margin-bottom: 18px;
+    }
+}
+
+.feature {
+    &-types {
+        @include myFlex;
+        justify-content: space-between;
+    }
+
+    &-type {
+        width: 45%;
+        margin-bottom: 35px;
+    }
+
+    &__pic {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    &__pic--app {
+        @include circle-bg($twored);
+    }
+
+    &__pic--ui {
+        @include circle-bg($greenish);
+    }
+
+    &__pic--cloud {
+        @include circle-bg($orange);
+    }
+
+    &__pic--support {
+        @include circle-bg($blueish);
+    }
+
+    &__lead {
+        margin-bottom: 8px;
+    }
+
+    &__btn {
+        @include blue-button;
+    }
+}
+
+// ! media
+
+@media (min-width: 1501px) {
+    .features {
+        background-position: 95% 50%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .features {
+        background-position: 90% 50%;
+    }
+}
+
+@media (min-width: 1750px) {
+    .features {
+        background-position: 85% 50%;
+    }
+}
+
+@media (min-width: 1800px) {
+    .features {
+        background-position: 80% 50%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .features {
+        background-size: 600px;
+    }
+
+    .features__inner {
+        width: 650px;
+        padding: 0 70px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .features {
+        background-size: 500px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .features__inner {
+        width: 600px;
+    }
+}
+
+@media (max-width: 950px) {
+    .features {
+        background-size: 500px;
+    }
+
+    .features__inner {
+        width: 550px;
+    }
+
+    .feature-type {
+        width: 80%;
+    }
+}
+
+@media (max-width: 850px) {
+    .features {
+        background-size: 450px;
+
+        &__inner {
+            width: 500px;
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .features {
+        background-position: 50% 17%;
+
+        &__inner {
+            width: 100%;
+            text-align: center;
+        }
+
+        &__header {
+            width: 100%;
+            margin: 0 auto 570px;
+        }
+
+        &__title {
+            width: 100%;
+        }
+    }
+
+    .feature-types {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .feature-type {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .feature-types {
+        width: 90%;
+
+        &__inner {
+            padding: 0 50px;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .feature-types {
+        width: 95%;
+    }
+
+    .features__inner {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 540px) {
+    .features {
+        background-size: 400px;
+
+        &__header {
+            margin-bottom: 500px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .app-features {
+        padding: 0 30px;
+    }
+}

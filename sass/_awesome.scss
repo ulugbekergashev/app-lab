@@ -1,0 +1,220 @@
+.awesome {
+    padding: 80px 0 50px;
+
+    &__content {
+        justify-content: space-between;
+        perspective: 1500px;
+    }
+
+    &__content--photos {
+        @include myFlex;
+        width: 50%;
+        background-image: url("../img/layer.png");
+        background-repeat: no-repeat;
+        background-position: 50% 150%;
+        background-size: contain;
+        transition: 0.15s transform;
+        transform-origin: center bottom;
+
+        &:hover {
+            transform: skewX(3deg) rotateX(10deg) scale(0.98);
+        }
+    }
+
+    &__photo {
+        width: 500px;
+        position: relative;
+        display: block;
+        background-image: url("../img/phone-copy.png");
+        background-repeat: no-repeat;
+        background-size: 88%;
+        background-position: 80% 20%;
+    }
+
+    &__content--text {
+        width: 50%;
+        padding: 0 120px;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+    }
+
+    &__header--paragraph {
+        margin-bottom: 50px;
+    }
+
+    .lead {
+        margin-bottom: 7px;
+    }
+}
+
+.companies {
+    text-align: center;
+    padding: 0 200px;
+    margin-bottom: 100px;
+
+    &__text {
+        margin-bottom: 25px;
+    }
+}
+
+.awesome-feature {
+    @include myFlex;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+
+    &:last-child {
+        margin-bottom: 20px;
+    }
+
+    &--text {
+        width: 70%;
+    }
+
+    &--pic {
+        margin-right: 25px;
+    }
+
+    &__fast {
+        @include circle-bg($pinkish);
+    }
+
+    &__prototyping {
+        @include circle-bg($blueish);
+    }
+
+    &__vector {
+        @include circle-bg($greenish);
+    }
+}
+
+// ! media
+
+@media (max-width: 1150px) {
+    .awesome {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .companies {
+        padding: 0 150px;
+    }
+
+    .awesome__content--text {
+        padding: 0 80px;
+    }
+
+    .awesome__content--photos {
+        background-position: 50% 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .awesome__content--text {
+        width: 55%;
+    }
+
+    .awesome__content--photos {
+        width: 45%;
+    }
+
+    .awesome-feature--pic .icon {
+        width: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .companies {
+        padding: 0 110px;
+    }
+
+    .awesome__content--text {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 800px) {
+    .awesome__content--text {
+        width: 45%;
+        padding: 0;
+    }
+
+    .awesome__content--photos {
+        width: 50%;
+    }
+}
+
+@media (max-width: 750px) {
+    .companies {
+        padding: 0 70px;
+    }
+
+    .awesome__content--text {
+        width: 50%;
+    }
+
+    .awesome-feature--pic {
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 690px) {
+    .companies {
+        padding: 0 30px;
+        margin-bottom: 50px;
+    }
+
+    .awesome__content {
+        justify-content: center;
+    }
+
+    .awesome__content--photos {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    .awesome__content--text {
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .companies {
+        padding: 0;
+    }
+
+    .awesome {
+        padding: 70px 40px;
+    }
+
+    .awesome__content--photos,
+    .awesome__content--text {
+        width: 90%;
+    }
+}
+
+@media (max-width: 400px) {
+    .awesome__content--photos,
+    .awesome__content--text {
+        width: 100%;
+    }
+
+    .awesome-feature {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .awesome-feature--pic {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .awesome-feature--text {
+        width: 100%;
+    }
+
+    .awesome {
+        padding: 60px 30px;
+    }
+}
